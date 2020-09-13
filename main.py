@@ -7,7 +7,6 @@ import pickle
 import sys
 
 ww, wh = 800, 600
-#font = pygame.SysFont("Arial")
 
 class Entity:
 
@@ -101,13 +100,9 @@ def main(genomes, config):
 
 	win = pygame.display.set_mode((ww,wh))
 	surf = pygame.Surface((ww,wh))
-#	clock = pygame.time.Clock()
-#	tps = 30
 	running = True
 
 	while running:
-
-#		clock.tick(tps)
 
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
@@ -189,7 +184,7 @@ def run(config_file):
 		for genome in winners:
 			main([(1,genome)], config)
 
-#	with open('winner-ctrnn', 'wb') as f:
+#	with open('winner-ctrnn', 'wb') as f: # save best genome to be loaded later
 #		pickle.dump(winner, f)
 
 def run_best(config_path):
