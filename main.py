@@ -178,7 +178,7 @@ def run(config_file):
 		winners.append(winner)
 
 	visualize = input("Do you want to visualize every generation? y/n: ").lower()
-	visualize = True if visualize[0] == 'y' else False
+	visualize = visualize[0] == 'y
 
 	if visualize:
 		for genome in winners:
