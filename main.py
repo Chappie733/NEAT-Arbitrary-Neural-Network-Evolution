@@ -178,13 +178,13 @@ def run(config_file):
 		winners.append(winner)
 
 	visualize = input("Do you want to visualize every generation? y/n: ").lower()
-	visualize = visualize[0] == 'y
+	visualize = visualize[0] == 'y'
 
 	if visualize:
 		for genome in winners:
 			main([(1,genome)], config)
 
-#	with open('winner-ctrnn', 'wb') as f: # save best genome to be loaded later
+#	with open('winner-ctrnn', 'wb') as f: # save best genome
 #		pickle.dump(winner, f)
 
 def run_best(config_path):
