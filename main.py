@@ -55,7 +55,7 @@ class Ball(Entity):
 		self.y += self.dy
 		if self.x-self.r <= 0 or self.x+self.r >= ww: # if the left or right side of the screen has been reached
 			self.dx *= -1
-		if self.y-self.r <= 0: # if the ball hit the top of the screen
+		if self.y-self.r <= 0: # if the ball has hit the top of the screen
 			self.dy = self.r
 		elif self.y+self.r >= wh: # if the ball fell to the bottom of the screen
 			self.x = ww/2-self.r/2
@@ -127,7 +127,7 @@ def main(genomes, config):
 			if balls[i].update(): # if the ball reached the bottom
 				ge[i].fitness -= 5
 				to_rem.append((ge[i],balls[i],obstacles[i],paddles[i],nets[i]))
-			if balls[i].collides(paddles[i]): # if the ball hit the paddle
+			if balls[i].collides(paddles[i]): # if the ball has hit the paddle
 				balls[i].dy *= -1
 				ge[i].fitness += 2
 
