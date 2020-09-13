@@ -203,7 +203,5 @@ if __name__ == '__main__':
 	if len(sys.argv) > 1:
 		if sys.argv[1] == 'best':
 			run_best(config_path)
-		else:
-			run(config_path)
 	else:
 		run(config_path)
